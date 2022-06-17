@@ -1,0 +1,18 @@
+.list-Container {
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+    overflow-y:scroll;
+    
+}
+
+.Data-Container{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    height: 80px;
+    justify-content: space-between;
+    border: 2px solid rgb(94, 91, 91);
+    background-color: lightgray;
+    margin-bottom: 10px;
+}

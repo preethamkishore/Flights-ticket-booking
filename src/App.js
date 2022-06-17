@@ -1,24 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import TicketBook from './pages/client/home/home';
+import Login from './pages/client/login/login';
+import SignIn from './pages/client/signin/SignIn';
+import AddFlight from './pages/admin/addflight/addflight';
+import Home from './pages/admin/home/home';
+import BookingList from './pages/admin/bookings/bookings';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/client' element ={<TicketBook/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/signin' element={<SignIn/>}/>
+        <Route path='/addflight' element={<AddFlight/>}/>
+        <Route path='/admin' element={<Home/>}/>
+        <Route path='/bookings/:id' element={<BookingList/>}/>
+        
+
+      </Routes>
+    </BrowserRouter>
   );
 }
 
